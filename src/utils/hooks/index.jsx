@@ -1,7 +1,6 @@
-import { useState, useEffect } from 'react'
-const [error, setError] = useState(false)
+import { useState, useEffect, useContext } from 'react'
+import { ThemeContext } from '../context'
 
- 
 
 export function useFetch(url) {
 
@@ -31,7 +30,7 @@ export function useFetch(url) {
     
     } catch (err) {
     
-    console.log(gerr)
+    console.log(err)
     
     setError(true)
     
@@ -50,3 +49,8 @@ export function useFetch(url) {
     return { isLoading, data, error }
     
     }
+
+export function useTheme() {
+    const { theme, toggleTheme } = useContext(ThemeContext)
+    return { theme, toggleTheme }
+ }
