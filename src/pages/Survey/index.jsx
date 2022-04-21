@@ -63,7 +63,7 @@ function Survey() {
   const prevQuestionNumber = questionNumberInt === 1 ? 1 : questionNumberInt - 1
   const nextQuestionNumber = questionNumberInt + 1
   const { answers, saveAnswers } = useContext(SurveyContext)
-  const { data, isLoading } = useFetch(`http://localhost:8000/survey`)
+  const { data, isLoading, error } = useFetch(`http://localhost:8000/survey`)
   const { surveyData } = data
  
 
@@ -71,7 +71,11 @@ function Survey() {
     saveAnswers({ [questionNumber]: answer })
   }
 
-  
+  if (error) {
+
+    return <span>Il y a un problème</span>
+    
+    }
 
   return (
     <SurveyContainer>
