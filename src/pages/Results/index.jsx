@@ -2,9 +2,8 @@ import { useContext } from 'react'
 import { SurveyContext } from '../../utils/context'
 import styled from 'styled-components'
 import colors from '../../utils/style/colors'
-import { useFetch } from '../../utils/hooks'
+import { useFetch, useTheme } from '../../utils/hooks'
 import { StyledLink, Loader } from '../../utils/style/Atoms'
-import { ThemeContext } from '../../utils/context'
 
 const ResultsContainer = styled.div`
   display: flex;
@@ -52,12 +51,6 @@ const LoaderWrapper = styled.div`
   display: flex;
   justify-content: center;
 `
-export function formatJobList(title, listLength, index) {
-  if (index === listLength - 1) {
-      return title
-  }
-  return `${title},`
-}
 
 export function formatQueryParams(answers) {
   const answerNumbers = Object.keys(answers)
@@ -69,9 +62,16 @@ export function formatQueryParams(answers) {
   }, '')
 }
 
+export function formatJobList(title, listLength, index) {
+  if (index === listLength - 1) {
+    return title
+  } else {
+    return `${title},`
+  }
+}
 
 function Results() {
-  const { theme } = useContext(ThemeContext)
+  const { theme } = useTheme()
   const { answers } = useContext(SurveyContext)
   const queryParams = formatQueryParams(answers)
 
@@ -87,23 +87,22 @@ function Results() {
 
   return isLoading ? (
     <LoaderWrapper>
-      <Loader />
+      <Loader data-testid="loader" />
     </LoaderWrapper>
   ) : (
     <ResultsContainer theme={theme}>
       <ResultsTitle theme={theme}>
-          Les compétences dont vous avez besoin :
-          {resultsData &&
-              resultsData.map((result, index) => (
-                  <JobTitle
-                      key={`result-title-${index}-${result.title}`}
-                      theme={theme}
-                  >
-                      {formatJobList(result.title, resultsData.length, index)}
-                  </JobTitle>
-
+        Les compétences dont vous avez besoin :
+        {resultsData &&
+          resultsData.map((result, index) => (
+            <JobTitle
+              key={`result-title-${index}-${result.title}`}
+              theme={theme}
+            >
+              {formatJobList(result.title, resultsData.length, index)}
+            </JobTitle>
           ))}
-       </ResultsTitle>
+      </ResultsTitle>
       <StyledLink $isFullLink to="/freelances">
         Découvrez nos profils
       </StyledLink>
@@ -114,8 +113,10 @@ function Results() {
               theme={theme}
               key={`result-detail-${index}-${result.title}`}
             >
-              <JobTitle theme={theme}>{result.title}</JobTitle>
-              <p>{result.description}</p>
+              <JobTitle theme={theme} data-testid="job-title">
+                {result.title}
+              </JobTitle>
+              <p data-testid="job-description">{result.description}</p>
             </JobDescription>
           ))}
       </DescriptionWrapper>
@@ -124,4 +125,3 @@ function Results() {
 }
 
 export default Results
-
