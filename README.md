@@ -1,71 +1,71 @@
-# Getting Started with Create React App
+# Shiny Agency 
+Site web proposant une liste de prestataire informatique selon les besoins de l'utilisateur. Pour ce faire, il suffit à l'utilisateur de répondre à une série de question par "oui" ou par "non", puis le site s'occupe de mettre en relation l'utilisateur et les prestaires correspondants à ses besoins. 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Premiers pas avec l'application Create React
 
-## Available Scripts
+Ce projet a été démarré avec [Create React App](https://create-react-app.dev/).
 
-In the project directory, you can run:
 
-### `yarn start`
+### Scénarios disponibles
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Dans le répertoire du projet, vous pouvez exécuter :
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+#### `yarn start`
 
-### `yarn test`
+Exécute l'application en mode développement.
+Ouvrez [http://localhost:3000](http://localhost:3000) pour l'afficher dans votre navigateur.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+La page se rechargera lorsque vous apporterez des modifications.
+Vous pouvez également voir des erreurs de charpie dans la console.
 
-### `yarn build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### `yarn test`
 
-The build is minified and the filenames include the hashes.\
+Lance le testeur en mode montre interactive.
+
+Voir la section sur [l'exécution des tests](https://facebook.github.io/create-react-app/docs/running-tests) pour plus d'informations.
+
+#### `yarn build`
+
+Génère l'application pour la production dans le  dossier `build`.
+Il regroupe correctement React en mode production et optimise la construction pour les meilleures performances.
+
+La construction est minifiée et les noms de fichiers incluent les hachages.
+Votre application est prête à être déployée !.
 Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Voir la section sur le [déploiement](https://facebook.github.io/create-react-app/docs/deployment) pour plus d'informations.
 
-### `yarn eject`
+#### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+**Remarque : il s'agit d'une opération à sens unique. Une fois que vous `eject`, vous ne pouvez pas revenir en arrière!**
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Si vous n'êtes pas satisfait de l'outil de construction et des choix de configuration, vous pouvez le faire `eject` à tout moment. Cette commande supprimera la dépendance de construction unique de votre projet.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Au lieu de cela, il copiera tous les fichiers de configuration et les dépendances transitives (webpack, Babel, ESLint, etc.) directement dans votre projet afin que vous ayez un contrôle total sur eux. Toutes les commandes sauf `eject` fonctionneront toujours, mais elles pointeront vers les scripts copiés afin que vous puissiez les modifier. À ce stade, vous êtes seul.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Vous n'avez jamais besoin d'utiliser `eject`. L'ensemble de fonctionnalités organisé convient aux déploiements de petite et moyenne taille, et vous ne devriez pas vous sentir obligé d'utiliser cette fonctionnalité. Cependant, nous comprenons que cet outil ne serait pas utile si vous ne pouviez pas le personnaliser lorsque vous êtes prêt.
 
-## Learn More
+## Comment participer au projet ?
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-"# shiny-agency" 
+  1. Cloner le projet 
+      
+         git clone https://github.com/MaryamVerdon/shiny-agency.git
+        
+    
+  2. En ligne de commande, se placer dans le répertoire `la-maison-jungle`
+  
+    
+         cd shiny-agency
+        
+         yarn install
+        
+         yarn start
+        
+ ## Le projet
+ 
+ ## A venir 
+ 
+    - compléter la documentation et ajouter des images du site web.
+    - ajouter un composant Profil 
+    - peaufiner le CSS
