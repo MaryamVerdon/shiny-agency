@@ -10,6 +10,7 @@ import Footer from './components/Footer'
 import Error from './components/Error'
 import GlobalStyle from './utils/style/GlobalStyle'
 import { ThemeProvider, SurveyProvider } from './utils/context'
+import Profile from './pages/Profile'
 
 ReactDOM.render(
   <React.StrictMode>
@@ -31,7 +32,11 @@ ReactDOM.render(
             <Route path="/freelances">
               <Freelances />
             </Route>
-            <Route>
+            <Route
+              path="/profile/:id"
+              render={(props) => <Profile {...props} />}
+            />
+             <Route path="*">
               <Error />
             </Route>
           </Switch>
